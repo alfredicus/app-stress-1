@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Stress inversion</title>
+    <script src='/app-stress-1/node_modules/@youwol/dataframe/dist/@youwol/dataframe.js'></script>
+    <script src='/app-stress-1/node_modules/@youwol/math/dist/@youwol/math.js'></script>
+    <script src='/app-stress-1/node_modules/@youwol/geometry/dist/@youwol/geometry.js'></script>
+    <script src='/app-stress-1/node_modules/@youwol/io/dist/@youwol/io.js'></script>
+    <script src='/stress/dist/@alfredo-taboada/stress.js'></script>
+    <script src="https://kit.fontawesome.com/daa834e337.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://unpkg.com/d3fc@14.0.27/build/d3fc.js"></script>
+
+    <link rel="stylesheet" href="js/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/lil-gui@0.17"></script>
+    <script type="text/javascript" src='./js/utils.js'></script>
+    <script type="text/javascript" src='./js/gui.js'></script>
+    <script type="text/javascript" src='./js/mohrCircle.js'></script>
+    <script type="text/javascript" src='./js/stress-test.js'></script>
+    <script type="text/javascript" src='./js/inversion-test.js'></script>
+</head>
+
+<body>
+    <div class="bottom-1 start-1" style='position: absolute; opacity: 70%; left: 20px; bottom: 20px;'>
+        <a href="https://www.youwol.com/" target="_blank">
+            <img src="youwol.png" style="width: 150px;">
+        </a>
+    </div>
+    <div class="bottom-1 start-1" style='position: absolute; opacity: 70%; left: 20px; bottom: 60px;'>
+        <a href="http://www.gm.univ-montp2.fr/" target="_blank">
+            <img src="geosciences.png" alt="geosciences" style="width: 130px;">
+        </a>
+    </div>
+
+    <div class="top-1 start-1" style='position: absolute; opacity: 75%; left: 260px; top: 5px'>
+        <div class="card" style="width: 200px; height: 150px; background-color: rgb(193, 193, 193);">
+            <div class="card-body">
+                <div class="card-title" style='font-size: 20px; font-weight: bold;'>Inversion info</div>
+                <div class="card-item sigma-1">
+                    <p class="card-text" style='font-family: "Lucida Console", "Courier New", monospace;'>σ1: 0.0</p>
+                </div>
+                <div class="card-item sigma-2">
+                    <p class="card-text" style='font-family: "Lucida Console", "Courier New", monospace;'>σ2: 0.0</p>
+                </div>
+                <div class="card-item sigma-3">
+                    <p class="card-text" style='font-family: "Lucida Console", "Courier New", monospace;'>σ3: 0.0</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="menu" style="position: absolute; opacity: 70%; margin-bottom:3px; top: 5px; left: 5px;"></div>
+
+
+    <div class="top-1 start-1" style='position: absolute; opacity: 75%; left: 260px; top: 160px'>
+        <div id="mohr" class="card" style="width: 200px; height: 200px; background-color: rgb(193, 193, 193);">
+        </div>
+    </div>
+
+    <input id="upload" type="file" style="visibility:hidden" />
+
+    <script>
+        const dataframe = globalThis['@youwol/dataframe']
+        const math = globalThis['@youwol/math']
+        const geom = globalThis['@youwol/geometry']
+        const io = globalThis['@youwol/io']
+        let stress = globalThis['@alfredo-taboada/stress']
+
+        generateGUI()
+        // inversionTest()
+    </script>
+</body>
+
+</html>

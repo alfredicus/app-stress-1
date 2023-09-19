@@ -1,0 +1,5 @@
+Number;Data type;Strike [0,360);Dip [0,90];Dip direction;Rake [0,90];Strike direction;Striation trend [0,360);Type of mouvement;Line trend [0,360);Line plunge [0,90];Deformation phase;Relative weight;Min friction angle;Max friction angle;Min angle <s1,n>;Max angle <s1,n>;Scale;Bedding-plane-strike;Bedding-plane-dip;Bedding-plane-dip-direction;x;y;z
+1;Striated Plane;45;30;SE;90;NE;;I;;;;;;;;;;;;;;;
+2;Striated Plane;45;45;NW;90;;;I;;;;;;;;;;;;;;;
+3;Striated Plane;105;90;;0;E;;RL;;;;;;;;;;;;;;;
+4;Striated Plane;165;90;S;0;;;LL;;;;;;;;;;;;;;;
